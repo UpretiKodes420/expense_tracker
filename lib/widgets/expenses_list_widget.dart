@@ -11,7 +11,7 @@ class ExpenseCard extends StatelessWidget {
     return Card(
       margin: CardThemeData().margin,
       //margin: EdgeInsets.all(20),
-      //color: Colors.pink[100],
+      color: Colors.pink[100],
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         child: Column(
