@@ -42,6 +42,7 @@ void main() {
             fontWeight: FontWeight.bold,
             color: kcolorScheme4.primary,
           ),
+
           displaySmall: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w300,
@@ -50,7 +51,7 @@ void main() {
         ),
 
         cardTheme: const CardThemeData(
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.fromLTRB(16, 4, 16, 4),
           elevation: 10,
         ),
 

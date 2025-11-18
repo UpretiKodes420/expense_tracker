@@ -11,7 +11,7 @@ class ExpenseCard extends StatelessWidget {
     final theme = Theme.of(context).textTheme;
 
     return Card(
-      margin: const EdgeInsets.all(20),
+      margin: Theme.of(context).cardTheme.margin,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         child: Column(
