@@ -60,12 +60,12 @@ class _ExpensesState extends State<Expenses> {
         title: Text(
           "Expense Tracker App",
 
-          style: ThemeData().textTheme.displayLarge,
+          style: Theme.of(context).textTheme.displayLarge,
         ),
         //backgroundColor: Colors.black,
         actions: [
           IconButton(
-            color: const Color.fromARGB(255, 11, 11, 11),
+            color: Theme.of(context).colorScheme.onPrimary,
             icon: Icon(Icons.add),
             onPressed: _openModalBox,
           ),

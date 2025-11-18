@@ -1,36 +1,68 @@
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/widgets/expenses.dart';
 
-var kcolorScheme = ColorScheme.fromSeed(
-  seedColor: Color.fromARGB(255, 32, 33, 33),
+var kcolorScheme4 = const ColorScheme.dark(
+  primary: Colors.black,
+  primaryContainer: Colors.grey,
+  onPrimary: Colors.white,
+  onPrimaryContainer: Colors.black,
+  secondary: Colors.grey,
+  onSecondary: Colors.white,
+  background: Colors.white,
+  onBackground: Colors.black,
+  surface: Colors.white,
+  onSurface: Colors.black,
+  error: Colors.red,
+  onError: Colors.white,
 );
-var kcolorScheme2 = ColorScheme.fromSeed(
-  seedColor: Color.fromARGB(255, 27, 179, 141),
+
+var nColorScheme = const ColorScheme.dark(
+  primary: Colors.black,
+  primaryContainer: Colors.grey,
+  onPrimary: Colors.white,
+  onPrimaryContainer: Colors.black,
+  // …
 );
-var kcolorScheme3 = ColorScheme.fromSeed(
-  seedColor: Color.fromARGB(255, 243, 255, 252),
-);
+
 void main() {
   runApp(
     MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: kcolorScheme,
+        colorScheme: kcolorScheme4,
+
         textTheme: TextTheme(
           displayLarge: TextStyle(
-            fontSize: 20,
+            fontSize: 25,
             fontWeight: FontWeight.bold,
-            color: kcolorScheme3.primaryContainer,
+            color: kcolorScheme4.onPrimary,
+          ),
+          displayMedium: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.bold,
+            color: kcolorScheme4.primary,
+          ),
+          displaySmall: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w300,
+            color: kcolorScheme4.primary,
           ),
         ),
-        cardTheme: CardThemeData(margin: EdgeInsets.all(20)),
+
+        cardTheme: const CardThemeData(
+          margin: EdgeInsets.all(20),
+          elevation: 10,
+        ),
+
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: kcolorScheme.primaryContainer,
+            backgroundColor: kcolorScheme4.onPrimary,
+            //foregroundColor: kcolorScheme4.onPrimary,
           ),
         ),
+
         appBarTheme: AppBarTheme(
-          backgroundColor: kcolorScheme3.onPrimaryContainer,
+          backgroundColor: kcolorScheme4.onPrimaryContainer,
         ),
       ),
       home: Expenses(),
